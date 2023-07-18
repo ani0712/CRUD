@@ -1,0 +1,14 @@
+<h1>User application</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+       <a href="/users/<%= user.id %>">
+        <%= user.name %> </br>
+        <%= user.food_item %>
+        
+      </a>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New User", new_user_path %>
