@@ -39,8 +39,8 @@ class UsersController < ApplicationController
         redirect_to users_path, status: :see_other
     end
 
-    def show_all_data
-        @data = User.all
+    def all_data
+        @data = Admin.all
     end
 
     private

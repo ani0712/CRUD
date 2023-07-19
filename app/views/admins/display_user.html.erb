@@ -1,0 +1,12 @@
+<h1> User List </h1>
+<% @element.each do |i| %>
+<ul>
+<li>
+<%= i.id %> <br>
+<%= i.name %><br>
+<%= i.email %><br>
+<%= i.date_of_order %><br>
+<%= i.food_item %>
+</li>
+</ul>
+<% end %>
