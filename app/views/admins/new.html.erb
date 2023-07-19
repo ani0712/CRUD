@@ -1,0 +1,24 @@
+<h1>New Admin</h1>
+
+<%= form_with model: @admin do |form| %>
+  <div>
+    <%= form.label :foodName %><br>
+    <%= form.text_field :food_name %>
+    <% @admin.errors.full_messages_for(:food_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :foodPrice %><br>
+    <%= form.text_area :food_price %>
+    <% @admin.errors.full_messages_for(:food_price).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<%= link_to "Back", admins_path %>
